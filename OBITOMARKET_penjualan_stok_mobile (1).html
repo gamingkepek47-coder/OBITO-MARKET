@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100709">
+<title>OBITOMARKET — Money DonutSMP</title>
+<meta name="description" content="Beli Money DonutSMP melalui OBITOMARKET. Pilih akun, jumlah, lalu konfirmasi pesanan dengan admin.">
+<style>
+:root{color-scheme:dark;--bg:#090909;--panel:#151515;--panel2:#202020;--line:#3b2024;--ink:#f7f7f7;--muted:#b4a4a6;--blue:#e50922;--blue2:#ff2438;--green:#ff3348}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}
+.wrap{width:min(900px,calc(100% - 32px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:#090909ed;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.4px}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(145deg,#ff3348,#c9001b);display:grid;place-items:center;color:#120305;font-weight:1000;font-size:21px}.nav a:last-child{color:var(--muted);font-size:13px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 30%,#780b18 0,transparent 48%),linear-gradient(135deg,#30060b,#4b0710 55%,#210509);padding:36px 0 30px}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#160306d9,#1603067a),repeating-linear-gradient(130deg,transparent 0 50px,#ffffff06 51px 53px);pointer-events:none}.hero-inner{position:relative}.eyebrow{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:850;color:#ff7a88}.hero h1{font-size:clamp(36px,7vw,62px);line-height:1.02;letter-spacing:-2px;margin:12px 0 17px}.hero p{font-size:clamp(15px,2.5vw,19px);line-height:1.7;color:#f1dfe1;max-width:720px;margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid #ffffff25;margin-top:28px;padding-top:22px}.stat small{display:block;color:#e2c5c8;font-size:12px;margin-bottom:7px}.stat strong{font-size:clamp(14px,2.5vw,21px);line-height:1.35}.green-dot{display:inline-block;width:10px;height:10px;background:var(--green);border-radius:50%;margin-right:6px;box-shadow:0 0 12px #ff334877}
+main{padding:24px 0 100px}.purchase{background:var(--panel);border:1px solid #3b2024;border-radius:25px;padding:22px;box-shadow:0 20px 60px #0003}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}.step{color:#b4a4a6;font-weight:800;display:flex;align-items:center;gap:9px;padding-bottom:14px;border-bottom:4px solid #3b2024}.step.active{color:var(--ink);border-color:var(--blue)}.step-num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#2b171a;color:#9aaccb;flex-shrink:0}.step.active .step-num{background:var(--blue);color:#08152c}.step-title{font-size:clamp(12px,2.5vw,17px)}h2{font-size:clamp(25px,4.5vw,38px);letter-spacing:-1.1px;margin:0 0 20px}.field{margin:20px 0}.label{display:block;font-size:15px;font-weight:800;margin-bottom:11px}.segmented{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:7px;background:#241316;border-radius:17px}.segmented label{position:relative;text-align:center;padding:17px 8px;border-radius:13px;font-weight:800;color:#d0b9bc;cursor:pointer}.segmented input{position:absolute;opacity:0}.segmented label:has(input:checked){background:#1b1012;color:#f2f5ff;box-shadow:0 2px 8px #0002}.field input{width:100%;padding:17px 16px;border:2px solid #503037;background:#100b0c;color:var(--ink);border-radius:17px;outline:none;font-size:16px}.field input:focus{border-color:var(--blue)}.field input::placeholder{color:#907d80}.hint{font-size:13px;color:var(--muted);line-height:1.6;margin:10px 0 0}.primary{width:100%;border:0;border-radius:17px;padding:19px;background:linear-gradient(180deg,var(--blue2),#c9001b);color:#120305;font-weight:900;font-size:17px;cursor:pointer;box-shadow:0 10px 24px #c9001b22}.primary:hover{filter:brightness(1.06)}.summary{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);background:#100b0c;border-radius:15px;padding:15px;margin:18px 0}.summary small{display:block;color:var(--muted);font-size:12px}.summary strong{display:block;margin-top:5px}.notice{font-size:12px;line-height:1.7;color:#bdcbe2;margin:16px 0 0}.how{padding:28px 0}.how h2{font-size:25px}.how-list{display:grid;gap:10px}.how-item{display:flex;gap:13px;padding:16px;border:1px solid var(--line);border-radius:15px;background:#101d31}.num{width:34px;height:34px;flex-shrink:0;display:grid;place-items:center;background:#3a171d;color:#ff7a88;border-radius:11px;font-weight:900}.how-item strong{font-size:14px}.how-item p{font-size:12px;color:var(--muted);line-height:1.6;margin:5px 0 0}.contact{padding:22px;border-radius:18px;background:#211013;border:1px solid #503037;margin:25px 0}.contact h2{font-size:23px;margin-bottom:8px}.contact p{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 16px}.contact .primary{display:block;text-align:center;padding:15px}
+.bottom-nav{position:fixed;z-index:8;bottom:0;left:0;right:0;background:#100b0c;border-top:1px solid #3b2024;display:grid;grid-template-columns:repeat(3,1fr);padding:10px max(12px,env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom));}.bottom-nav a{text-align:center;color:#b4a4a6;font-size:12px;font-weight:800;padding:3px}.bottom-nav a.active{color:var(--blue2)}.nav-icon{font-size:23px;display:block;margin-bottom:3px}footer{padding:18px 0 95px;color:#7386a6;font-size:11px;line-height:1.7;text-align:center}
+@media(min-width:760px){.hero{padding:54px 0 42px}.purchase{padding:30px}.purchase-wrap{max-width:780px;margin:auto}.how-list{grid-template-columns:repeat(3,1fr)}.how-item{align-items:flex-start}}
+@media(max-width:430px){.wrap{width:calc(100% - 22px)}.nav{height:60px}.logo{width:35px;height:35px}.brand{font-size:14px}.hero{padding:29px 0 25px}.stats{gap:8px}.stat small{font-size:11px}.purchase{padding:17px;border-radius:22px}.steps{gap:7px}.step{gap:6px;padding-bottom:11px}.step-num{width:29px;height:29px;font-size:12px}.step-title{font-size:12px}.segmented label{padding:15px 5px}.field input{padding:15px 13px}.primary{padding:17px}.summary{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home"><span class="logo">O</span><span>OBITOMARKET</span></a><a href="#produk">Money DonutSMP ↓</a></div></header>
+
+
+<section class="hero" id="home"><div class="wrap hero-inner">
+<div class="eyebrow">Minecraft marketplace</div>
+<h1>Beli Money<br>DonutSMP</h1>
+<p>Pilih akun Minecraft dan jumlah money yang kamu inginkan. Bayar setelah detail pesanan dikonfirmasi admin. Pengiriman dilakukan manual.</p>
+<div class="stats">
+<div class="stat"><small>Produk</small><strong>Money DonutSMP</strong></div>
+<div class="stat"><small>Pengiriman</small><strong><span class="green-dot"></span>Manual oleh admin</strong></div>
+<div class="stat"><small>Pembayaran</small><strong>QRIS*</strong></div>
+</div></div></section>
+<main class="wrap" id="produk">
+<div id="stockBanner" style="display:block;width:100%;margin:18px 0 16px;padding:16px 15px;border:1px solid #ed1b2f;border-left:5px solid #ed1b2f;border-radius:12px;background:#171010;color:#fff;line-height:1.45;overflow-wrap:anywhere">
+<strong id="stockTitle" style="display:block;font-size:16px;line-height:1.4;font-weight:800;letter-spacing:.1px">Status stok: cek dengan admin</strong><div id="stockDetail" style="color:#e0d2d4;font-size:14px;line-height:1.45;margin-top:6px">Stok dapat berubah sewaktu-waktu.</div></div>
+<div class="purchase-wrap"><section class="purchase">
+<div class="steps" aria-label="Tahapan pemesanan"><div class="step active" id="step1"><span class="step-num">1</span><span class="step-title">Akun</span></div><div class="step" id="step2"><span class="step-num">2</span><span class="step-title">Jumlah</span></div><div class="step" id="step3"><span class="step-num">3</span><span class="step-title">Bayar</span></div></div>
+<h2 id="formTitle">Akun Minecraft tujuan</h2>
+<div id="accountPanel">
+<div class="field"><span class="label">Jenis akun</span><div class="segmented"><label><input type="radio" name="edition" value="Java" checked>Java</label><label><input type="radio" name="edition" value="Bedrock">Bedrock</label></div></div>
+<div class="field"><label class="label" for="username">Username Minecraft</label><input id="username" maxlength="32" autocomplete="off" placeholder="Contoh: DrDonutt"><p class="hint" id="usernameHint">Username Java, persis seperti di game.</p></div>
+<button class="primary" id="toAmount">Cek akun</button>
+</div>
+<div id="amountPanel" hidden>
+<div class="field"><label class="label" for="amount">Jumlah money</label><input id="amount" inputmode="text" type="text" autocomplete="off" placeholder="Contoh: 30m"><p class="hint">Tulis jumlah dalam satuan M, misalnya 30m = 30.000.000 money. Minimal pembelian 30m.</p></div>
+<div class="summary"><div><small>Username tujuan</small><strong id="summaryUser">—</strong></div><div><small>Jumlah money</small><strong id="summaryAmount">Belum diisi</strong></div></div>
+<button class="primary" id="toPayment">Lanjut ke pembayaran</button><p class="notice">Jangan melakukan pembayaran sebelum admin mengonfirmasi harga dan stok.</p>
+</div>
+<div id="paymentPanel" hidden>
+<div class="summary"><div><small>Pesanan untuk</small><strong id="paymentUser">—</strong></div><div><small>Jumlah money</small><strong id="paymentAmount">—</strong></div></div>
+<div class="summary"><div><small>Status pembayaran</small><strong>Menunggu konfirmasi admin</strong></div><div><small>Metode</small><strong>QRIS*</strong></div></div>
+<p class="notice">QRIS belum aktif pada versi tampilan ini. Hubungi admin untuk menerima instruksi pembayaran yang sah. Jangan membayar melalui QR yang tidak diberikan atau diverifikasi admin.</p>
+<button class="primary" id="sendOrder">Kirim pesanan ke WhatsApp</button>
+<button class="primary" id="backAmount" style="margin-top:10px;background:#32151a;color:#fff0f2">Kembali</button>
+</div>
+<p class="notice">*Pembayaran QRIS otomatis memerlukan integrasi payment gateway. Pada versi ini belum ada pembayaran online atau verifikasi transaksi otomatis.</p>
+</section></div>
+<section class="how" id="cara-pesan"><h2>Cara membeli</h2><div class="how-list">
+<div class="how-item"><span class="num">1</span><div><strong>Isi akun Minecraft</strong><p>Pilih Java atau Bedrock dan masukkan username dengan benar.</p></div></div>
+<div class="how-item"><span class="num">2</span><div><strong>Tentukan jumlah</strong><p>Masukkan jumlah singkat seperti 30M. Minimal pembelian 30M.</p></div></div>
+<div class="how-item"><span class="num">3</span><div><strong>Bayar dan tunggu</strong><p>Ikuti instruksi pembayaran resmi. Setelah pembayaran diverifikasi, admin mengirim money secara manual.</p></div></div>
+</div></section>
+<section class="contact" id="kontak"><h2>Butuh bantuan?</h2><p>Hubungi admin OBITOMARKET untuk memastikan harga, stok, dan cara pembayaran.</p><a class="primary" href="https://wa.me/6285785425586?text=Halo%20admin%20Brazox%20Market%2C%20saya%20ingin%20bertanya%20tentang%20Money%20DonutSMP." target="_blank" rel="noopener">Chat admin WhatsApp ↗</a></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> OBITOMARKET · Katalog independen, bukan situs resmi DonutSMP.</div></footer>
+<nav class="bottom-nav"><a class="active" href="#produk"><span class="nav-icon">🛒</span>Beli</a><a href="#cara-pesan"><span class="nav-icon">▣</span>Cara beli</a><a href="#kontak"><span class="nav-icon">♙</span>Admin</a></nav>
+<script>
+const $=id=>document.getElementById(id);
+const username=$('username'), amount=$('amount');
+let edition='Java';
+document.querySelectorAll('input[name="edition"]').forEach(el=>el.addEventListener('change',()=>{
+ edition=el.value;
+ $('usernameHint').textContent=edition==='Java'?'Username Java, persis seperti di game.':'Username Bedrock, persis seperti yang digunakan di server.';
+}));
+function step(n){
+ [1,2,3].forEach(i=>$('step'+i).classList.toggle('active',i===n));
+ $('accountPanel').hidden=n!==1;$('amountPanel').hidden=n!==2;$('paymentPanel').hidden=n!==3;
+ $('formTitle').textContent=n===1?'Akun Minecraft tujuan':n===2?'Pilih jumlah money':'Konfirmasi pesanan';
+ window.scrollTo({top:$('produk').getBoundingClientRect().top+window.scrollY-75,behavior:'smooth'});
+}
+function parseAmount(v){
+ let raw=String(v||'').trim().toLowerCase().replace(/\s+/g,'');
+ const hasM=raw.endsWith('m');
+ if(hasM) raw=raw.slice(0,-1);
+ // Accept short input (5m or 30) and full money numbers (5.000.000).
+ if(!hasM && /^\d{1,3}(?:\.\d{3})+$/.test(raw)) raw=raw.replace(/\./g,'');
+ if(!/^\d+(?:[.,]\d+)?$/.test(raw)) return NaN;
+ const n=Number(raw.replace(',','.'));
+ return hasM || n<1000000 ? n : n/1000000;
+}
+function fmtM(n){return Number.isFinite(n)?String(n).replace(/\.0+$/,'')+'M':'Belum diisi'}
+function fmt(v){return fmtM(parseAmount(v))}
+$('toAmount').addEventListener('click',()=>{
+ if(!username.value.trim()){username.focus();alert('Masukkan username Minecraft terlebih dahulu.');return}
+ $('summaryUser').textContent=edition+' · '+username.value.trim();step(2);
+});
+$('toPayment').addEventListener('click',()=>{
+ const amountM=parseAmount(amount.value);
+ if(!Number.isFinite(amountM)){amount.focus();alert('Masukkan jumlah dengan format M, misalnya 100m.');return}
+ if(amountM<30){amount.focus();alert('Minimal pembelian adalah 30M.');return}
+ const amountLabel=fmtM(amountM);
+ $('summaryAmount').textContent=amountLabel+' money';
+ $('paymentUser').textContent=edition+' · '+username.value.trim();
+ $('paymentAmount').textContent=amountLabel+' money';
+ step(3);
+});
+$('backAmount').addEventListener('click',()=>step(2));
+$('sendOrder').addEventListener('click',()=>{
+ // Re-read the current input at the moment the WhatsApp order is created.
+ const amountM=parseAmount(amount.value);
+ if(!Number.isFinite(amountM)){step(2);amount.focus();alert('Masukkan jumlah dengan format M, misalnya 100m.');return}
+ if(amountM<30){step(2);amount.focus();alert('Minimal pembelian adalah 30M.');return}
+ const amountLabel=fmtM(amountM);
+ $('summaryAmount').textContent=amountLabel+' money';
+ $('paymentAmount').textContent=amountLabel+' money';
+ const message='Halo admin OBITOMARKET, saya ingin memesan Money DonutSMP. Edisi akun: '+edition+'. Username: '+username.value.trim()+'. Jumlah money: '+amountLabel+'. Mohon konfirmasi harga, stok, dan instruksi pembayaran QRIS. Saya memahami pengiriman money dilakukan manual oleh admin.';
+ window.open('https://wa.me/6285785425586?text='+encodeURIComponent(message),'_blank','noopener');
+});
+$('year').textContent=new Date().getFullYear();
+</script>
+
+<script>
+(function(){
+ const KEY='obitomarket_stock_v1';
+ try {
+  const d=JSON.parse(localStorage.getItem(KEY)||'null');
+  if(!d)return;
+  const title=document.getElementById('stockTitle'),detail=document.getElementById('stockDetail'),box=document.getElementById('stockBanner');
+  if(!title||!detail||!box)return;
+  if(d.status==='ready'){
+   title.textContent='STOK READY — '+(Number(d.stock)||0)+'M';
+   detail.textContent=d.note||'Stok tersedia. Konfirmasi stok akhir kepada admin sebelum membayar.';
+   box.style.borderColor='#1b8b50';
+  } else if(d.status==='empty'){
+   title.textContent='STOK HABIS';
+   detail.textContent='Stok sedang habis. Silakan cek kembali nanti.';
+   box.style.borderColor='#ed1b2f';
+  } else {
+   title.textContent='Stok dikonfirmasi oleh admin';
+   detail.textContent='Hubungi admin untuk memastikan ketersediaan.';
+  }
+ } catch(e) {}
+})();
+</script>
+
+</body>
+</html>
